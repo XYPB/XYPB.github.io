@@ -1,21 +1,21 @@
-title: Abhishek Nagekar
-description: Web & Security Engineer
-site_title: '@abhn - Abhishek Nagekar'
+title: Yuexi Du
+description: Medical Image Analysis & CV
+site_title: '@XYPB - Yuexi Du'
 
 # Build settings
 markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
-blog_url: https://www.nagekar.com
-email: abhishek@nagekar.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+github_username: XYPB
+blog_url: https://xypb.github.io/
+email: yuexi.du@yale.edu
+keybase_username: XYPB
+twitter_username: yuexi_du
+reddit_username: XYPB
 
 # absolute or relative
-profile_picture: assets/images/pp.jpg
+profile_picture: assets/images/selfish.jpg
 
 # Google Analytics ID
 google_analytics: 
