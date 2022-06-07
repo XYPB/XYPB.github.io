@@ -54,7 +54,16 @@ let render_projects = (slug) => {
             technologies: ['CV', 'Python', 'PyTorch'],
             description: "COLOR-VAE: Generative Colorization with Variational Auto-encoder",
             categories: ['featured', 'CV']
-        },        
+        },
+        {
+            image: 'assets/images/canvas.png',
+            link: 'https://github.com/BoYanZh/Canvas-Syncer',
+            title: 'CanvasSyncer',
+            demo: false,
+            technologies: ['Python'],
+            description: "An async python script that synchronizes files and folders across Canvas Files and local, with extremely fast speed",
+            categories: ['featured', 'Others']
+        },      
     ]
 
     let projects = [];
