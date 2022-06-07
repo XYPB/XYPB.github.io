@@ -11,7 +11,7 @@ let render_projects = (slug) => {
 
     let projects_obj = [
         {
-            image: 'assets/images/CFG.jpg',
+            image: 'assets/images/CFG.png',
             link: false,
             title: 'Conditional Foley Generation',
             demo: false,
@@ -20,7 +20,7 @@ let render_projects = (slug) => {
             categories: ['featured', 'CV']
         },
         {
-            image: 'assets/images/argo.jpg',
+            image: 'assets/images/argo.png',
             link: 'https://github.com/Yscorexm/ARGo',
             title: 'ARGo',
             demo: 'https://www.youtube.com/watch?v=mN4nRNxuwDw',
@@ -29,7 +29,7 @@ let render_projects = (slug) => {
             categories: ['featured', 'Android']
         },
         {
-            image: 'assets/images/SSDA.jpg',
+            image: 'assets/images/SSDA.png',
             link: 'https://github.com/narendoraiswamy/Domain_clustering_SSDA',
             title: 'SSDA',
             demo: false,
@@ -38,7 +38,7 @@ let render_projects = (slug) => {
             categories: ['CV']
         },
         {
-            image: 'assets/images/RetCCL.jpg',
+            image: 'assets/images/RetCCL.png',
             link: false,
             title: 'RetCCL',
             demo: false,
@@ -47,7 +47,7 @@ let render_projects = (slug) => {
             categories: ['featured', 'CV']
         },
         {
-            image: 'assets/images/ColorVAE.jpg',
+            image: 'assets/images/colorVAE.jpg',
             link: 'https://github.com/XYPB/ColorVAE',
             title: 'ColorVAE',
             demo: 'https://drive.google.com/file/d/1HQzCaNgMwJ8CPR0Vxa9Zt1a_jjqoBpHX/view',
