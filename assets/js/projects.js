@@ -67,7 +67,7 @@ let render_projects = (slug) => {
         {
             image: 'assets/images/skeleton_encoding.png',
             link: 'https://github.com/zyayoung/skeleton-encode',
-            title: 'SkeletonEncoding',
+            title: 'SkeletonEncoder',
             demo: false,
             technologies: ['Python', 'CV'],
             description: "Automatic human skeleton keypoint recognition and lossless compression projects.",
