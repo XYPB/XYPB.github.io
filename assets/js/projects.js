@@ -26,7 +26,7 @@ let render_projects = (slug) => {
             demo: 'https://www.youtube.com/watch?v=mN4nRNxuwDw',
             technologies: ['Kotlin', 'ARCore'],
             description: "ARGo is an Android app that allows you to view, create, edit, and share AR sticky note to real-world items wherever your want.",
-            categories: ['featured', 'Android']
+            categories: ['Others']
         },
         {
             image: 'assets/images/SSDA.png',
@@ -62,8 +62,17 @@ let render_projects = (slug) => {
             demo: false,
             technologies: ['Python'],
             description: "An async python script that synchronizes files and folders across Canvas Files and local, with extremely fast speed",
-            categories: ['featured', 'Others']
-        },      
+            categories: ['Others']
+        },
+        {
+            image: 'assets/images/skeleton_encoding.png',
+            link: 'https://github.com/zyayoung/skeleton-encode',
+            title: 'SkeletonEncoding',
+            demo: false,
+            technologies: ['Python', 'CV'],
+            description: "Automatic human skeleton keypoint recognition and lossless compression projects.",
+            categories: ['featured', 'CV']
+        },
     ]
 
     let projects = [];
