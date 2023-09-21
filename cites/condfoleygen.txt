@@ -1,0 +1,7 @@
+@inproceedings{
+    du2023conditional,
+    title={Conditional Generation of Audio from Video via Foley Analogies},
+    author={Du, Yuexi and Chen, Ziyang and Salamon, Justin and Russell, Bryan and Owens, Andrew},
+    booktitle={Conference on Computer Vision and Pattern Recognition 2023},
+    year={2023},
+}

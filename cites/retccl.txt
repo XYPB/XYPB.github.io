@@ -1,0 +1,9 @@
+@article{WANG2023102645,
+    title = {RetCCL: Clustering-guided contrastive learning for whole-slide image retrieval},
+    author = {Xiyue Wang and Yuexi Du and Sen Yang and Jun Zhang and Minghui Wang and Jing Zhang and Wei Yang and Junzhou Huang and Xiao Han},
+    journal = {Medical Image Analysis},
+    volume = {83},
+    pages = {102645},
+    year = {2023},
+    issn = {1361-8415}
+}

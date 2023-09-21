@@ -21,3 +21,5 @@ profile_picture: assets/images/selfish_square.png
 
 # Google Analytics ID
 google_analytics: 
+
+theme: jekyll-theme-cayman
