@@ -1,0 +1,6 @@
+@article{du2024sift,
+  title={SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification},
+  author={Du, Yuexi and Hooley, Regina J and Lewin, John and Dvornek, Nicha C},
+  journal={arXiv preprint arXiv:2403.13148},
+  year={2024}
+}
