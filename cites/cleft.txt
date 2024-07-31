@@ -1,0 +1,6 @@
+@article{du2024cleft,
+  title={CLEFT: Language-Image Contrastive Learning with Efficient Large Language Model and Prompt Fine-Tuning},
+  author={Du, Yuexi and Chang, Brian and Dvornek, Nicha C},
+  journal={arXiv preprint arXiv:2407.21011},
+  year={2024}
+}
