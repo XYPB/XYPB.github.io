@@ -1,6 +1,11 @@
-@article{du2024sift,
-  title={SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification},
-  author={Du, Yuexi and Hooley, Regina J and Lewin, John and Dvornek, Nicha C},
-  journal={arXiv preprint arXiv:2403.13148},
-  year={2024}
+@INPROCEEDINGS{10635723,
+  author={Du, Yuexi and Hooley, Regina J. and Lewin, John and Dvornek, Nicha C.},
+  booktitle={2024 IEEE International Symposium on Biomedical Imaging (ISBI)}, 
+  title={SIFT-DBT: Self-Supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Learning systems;Predictive models;Data models;Breast cancer;Spatial resolution;Biomedical imaging;Image classification;Digital Breast Tomosynthesis;Data Imbalance;Self-Supervised Contrastive Pre-training},
+  doi={10.1109/ISBI56570.2024.10635723}
 }
