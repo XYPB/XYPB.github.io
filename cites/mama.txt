@@ -1,0 +1,6 @@
+@article{du2024mama,
+  title={Multi-View and Multi-Scale Alignment for Contrastive Language-Image Pre-training in Mammography},
+  author={Du, Yuexi and Onofrey, John and Dvornek, Nicha C},
+  journal={arXiv preprint arXiv:2409.18119},
+  year={2024}
+}
