@@ -1,0 +1,10 @@
+@article{du2025sreconv,
+      title={SRE-Conv: Symmetric Rotation Equivariant Convolution for Biomedical Image Classification}, 
+      author={Du, Yuexi and Onofrey, John A and others},
+      journal={arXiv preprint arXiv:2501.09753},
+      year={2025},
+      eprint={2501.09753},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.09753}, 
+}
