@@ -9,76 +9,156 @@
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
           body {
-            font-family: 'sans-serif';
+            font-family: 'Roboto', sans-serif;
             font-size: 16px;
-            background-color: #FFFFFF;
-            color: #4F6071;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+          }
+          a {
+            color: #0066cc;
+            transition: color 0.2s;
+          }
+          a:hover {
+            color: #004499;
+            text-decoration: none;
           }
           #header {
-            background-color: #dbe2ec;
-            /*background-color: #FFFFFF;*/
-            display: flex;
-            align-items: flex-end;
-            padding-top:60px;
-            padding-bottom:60px;
+            background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%);
+            padding: 80px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+          #header .container {
+            text-align: center;
           }
           #footer {
-            background-color: #FFFFFF;
-            padding:60px;
-          }
-          #portrait {
-            border: 3px solid white;
-          }
-          #header-text {
-            margin-top: 60px;
-            margin-left: 220px;
+            background-color: #f8f9fa;
+            padding: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
           }
           #header-text-name {
-            font-size: 40px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
           }
           #header-text-email {
-            font-size: 20px;
-            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 20px;
           }
-          .header-text-desc {
-            font-size: 20px;
+          #header a {
+            margin: 0 10px;
+            font-weight: 500;
+            color: #444;
           }
+          #header a:hover {
+            color: #000;
+          }
+          
+          /* Main Content Container */
+          body > .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            max-width: 1000px;
+          }
+
+          h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            margin-top: 10px;
+          }
+          
+          p {
+            text-align: justify;
+            margin-bottom: 1.2rem;
+          }
+
           .vspace-top {
-            margin-top: 30px;
+            margin-top: 40px;
           }
           .vspace-top-news {
+              margin-top: 0;
+              padding: 12px 0;
+              border-bottom: 1px solid #f0f0f0;
+          }
+          .vspace-top-news:last-child {
+              border-bottom: none;
+          }
+          .news-container {
+              height: 300px;
+              overflow-y: auto;
+              border: 1px solid #eee;
+              padding: 0 15px;
+              border-radius: 4px;
+              background-color: #fcfcfc;
               margin-top: 15px;
           }
           .paper-image {
-            width: 150px;
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+          }
+          .paper-image:hover {
+            transform: scale(1.02);
           }
           .news-date {
               font-weight: bold;
+              color: #555;
+              font-size: 0.95rem;
           }
           .course-number {
               font-weight: bold;
+              color: #444;
           }
           .paper-title {
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #222;
           }
           .paper-authors {
             font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+          }
+          .paper-desc {
+             color: #666;
+             margin-bottom: 5px;
           }
           .company-name {
             font-weight: bold;
+            font-size: 1.1rem;
           }
           .intern-host {
             font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
           }
     </style>
 </head>
 
 <body>
-    <center>
     <div id='header'>
         <div class='container'>
             <div class='row'>
@@ -93,28 +173,26 @@
                         Yuexi Du
                     </div>
                     <div id='header-text-email'>
-                    yuexi.du@yale.edu
+                    <i class="fa fa-envelope" aria-hidden="true"></i> yuexi.du@yale.edu
                   </div>
                   <div>
-                    <a href="https://github.com/XYPB">[GitHub]</a>
-                    <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&hl=en">[Google Scholar]</a>
-                    <a href="https://twitter.com/yuexi_du">[Twitter]</a>
-                    <a href="resume/resume_Yuexi_Du.pdf">[Download CV]</a> 
+                    <a href="https://github.com/XYPB"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                    <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&hl=en"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+                    <a href="https://twitter.com/yuexi_du"><i class="fa fa-linkedin" aria-hidden="true"></i> Twitter</a>
+                    <a href="linkedin.com/in/yuexi-du-42b972208"><i class="fa fa-twitter" aria-hidden="true"></i> Linkedin</a>
+                    <a href="resume/resume_Yuexi_Du.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download CV</a> 
                   </div>
                 </div>
             </div>
         </div>
     </div>
-    </center>
-
-
 
     <div class='container'>
         <div class='row vspace-top'>
-            <div class='col offset-sm-1'>
+            <div class='col-12'>
                 <h1>Bio</h1>
                 <p>
-                    I am a Ph.D. candidate at Yale University, majoring in BME, advised by Prof. <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>. I am also actively collaborating with Prof. <a href="https://scholar.google.com/citations?user=ccSuHj8AAAAJ&hl=en">John Onofrey</a>. Before that, I got my Bachelor's degree in CS at the University of Michigan, Ann Arbor, advised by Prof. <a href="https://andrewowens.com/">Andrew Owens</a>, and another Bachelor's degree in ECE at Shanghai Jiao Tong University.
+                    I am a fourth-year Ph.D. candidate at Yale University, majoring in BME, advised by Prof. <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>. I am also actively collaborating with Prof. <a href="https://scholar.google.com/citations?user=ccSuHj8AAAAJ&hl=en">John Onofrey</a>. Before that, I got my Bachelor's degree in CS at the University of Michigan, Ann Arbor, advised by Prof. <a href="https://andrewowens.com/">Andrew Owens</a>, and another Bachelor's degree in ECE at Shanghai Jiao Tong University.
                 </p>
                 <p>
                     My research interest lies in the computer vision, multi-modality learning, and medical image analysis. I am always thrilled to work on questions that address real-world needs.
@@ -128,6 +206,7 @@
                     <h1>News</h1>
                 </div>
 
+                <div class="news-container">
                 <div class='row vspace-top-news'>
                     <div class="col-sm-2 news-date">
                         Nov 2025
@@ -271,6 +350,7 @@
                         I will join Yale University as a Ph.D. student majoring in BME!
                     </div>
                 </div>
+                </div>
                 <div>&nbsp;</div>
 
                 <div class='vspace-top'>
@@ -279,12 +359,12 @@
 
                 
                 <div class='row vspace-top'>
-                    <div class="col-sm-1">
-                        <img width="100%" src="assets/logos/ms_logo.png">
+                    <div class="col-sm-2">
+                        <img width="100%" src="assets/logos/ms_logo.png" style="border-radius: 4px;">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-10">
                         <div class='company-name'>
                             Microsoft Research Asia - Media Computing Group
                         </div>
@@ -298,12 +378,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-1">
-                        <img width="100%" src="assets/logos/tencent_ailab.png">
+                    <div class="col-sm-2">
+                        <img width="100%" src="assets/logos/tencent_ailab.png" style="border-radius: 4px;">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-10">
                         <div class='company-name'>
                             Tencent AI Lab - AI Healthcare Group
                         </div>
@@ -325,12 +405,12 @@
                 <!--- List of publications --->
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/glam.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/glam.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             GLAM: Geometry-Guided Local Alignment for Multi-View Visual Language Pre-Training in Mammography
@@ -350,12 +430,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/MaMA.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/MaMA.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             MaMA: Multi-View and Multi-Scale Alignment for Contrastive Language-Image Pre-training in Mammography
@@ -375,12 +455,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/sre_conv.gif">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/sre_conv.gif">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             SRE-Conv: Symmetric Rotation Equivariant Convolution for Biomedical Image Classification
@@ -400,12 +480,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/cleft.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/cleft.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             CLEFT: Language-Image Contrastive Learning with Efficient Large Language Model and Prompt Fine-Tuning
@@ -425,12 +505,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/volume_all_roc.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/volume_all_roc.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification
@@ -451,12 +531,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/avanalogies.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/avanalogies.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             Conditional Generation of Audio from Video via Foley Analogies
@@ -477,12 +557,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4">
-                        <img width="100%" src="assets/images/retccl.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/retccl.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <!-- <div>&nbsp;</div> -->
                         <div class='paper-title'>
                             RetCCL: Clustering-guided contrastive learning for whole-slide image retrieval
@@ -507,12 +587,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4", >
-                        <img width="100%" src="assets/images/DDM2.png">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/DDM2.png">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div class='paper-title'>
                             Controlled and Self-supervised Diffusion MRI Denoising via Generative Diffusion
@@ -531,12 +611,12 @@
                 </div>
 
                 <div class='row vspace-top'>
-                    <div class="col-sm-4", >
-                        <img width="100%" src="assets/images/colorVAE.jpg">
+                    <div class="col-sm-3">
+                        <img class="paper-image" src="assets/images/colorVAE.jpg">
                         </img>
                     </div>
                 
-                    <div class="col">
+                    <div class="col-sm-9">
                         <div>&nbsp;</div>
                         <div>&nbsp;</div>
                         <div class='paper-title'>
@@ -602,12 +682,14 @@
 
 
     <div id='footer' class='vspace-top'>
-    <div>
+        <div class="container">
+            &copy; 2025 Yuexi Du.
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>
