@@ -1,0 +1,10 @@
+@InProceedings{DuYue_GeometryGuided_MICCAI2025,
+    author = { Du, Yuexi AND Chen, Lihui AND Dvornek, Nicha C.},
+    title = { { Geometry-Guided Local Alignment for Multi-View Visual Language Pre-Training in Mammography } },
+    booktitle = {proceedings of Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025},
+    year = {2025},
+    publisher = {Springer Nature Switzerland},
+    volume = {LNCS 15965},
+    month = {September},
+    page = {299 -- 310}
+}
