@@ -1,0 +1,9 @@
+@misc{du2026care,
+      title={CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework}, 
+      author={Yuexi Du and Jinglu Wang and Shujie Liu and Nicha C. Dvornek and Yan Lu},
+      year={2026},
+      eprint={2603.01607},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2603.01607}, 
+}
