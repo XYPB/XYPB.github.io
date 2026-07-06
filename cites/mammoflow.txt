@@ -1,0 +1,6 @@
+@article{du2026mammoflow,
+  title={MammoFlow: Multiview Mammogram Synthesis with Anatomically Consistent Flow Matching},
+  author={Du, Yuexi and Barrientos, Leya and Sheiman, Laura and Lewin, John and Tagare, Hemant D and Dvornek, Nicha C},
+  journal={arXiv preprint arXiv:2606.28537},
+  year={2026}
+}
