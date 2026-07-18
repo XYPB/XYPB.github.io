@@ -1,879 +1,318 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Yuexi Du</title>
-
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-          }
-          a {
-            color: #0066cc;
-            transition: color 0.2s;
-          }
-          a:hover {
-            color: #004499;
-            text-decoration: none;
-          }
-          #header {
-            background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%);
-            padding: 80px 0;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          }
-          #header .container {
-            text-align: center;
-          }
-          #footer {
-            background-color: #f8f9fa;
-            padding: 40px;
-            text-align: center;
-            color: #777;
-            font-size: 0.9rem;
-          }
-          #header-text-name {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 10px;
-          }
-          #header-text-email {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #555;
-            margin-bottom: 20px;
-          }
-          #header a {
-            margin: 0 10px;
-            font-weight: 500;
-            color: #444;
-          }
-          #header a:hover {
-            color: #000;
-          }
-          
-          /* Main Content Container */
-          body > .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            max-width: 1000px;
-          }
-
-          h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            margin-top: 10px;
-          }
-          
-          p {
-            text-align: justify;
-            margin-bottom: 1.2rem;
-          }
-
-          .vspace-top {
-            margin-top: 40px;
-          }
-          .vspace-top-news {
-              margin-top: 0;
-              padding: 12px 0;
-              border-bottom: 1px solid #f0f0f0;
-          }
-          .vspace-top-news:last-child {
-              border-bottom: none;
-          }
-          .news-container {
-              height: 300px;
-              overflow-y: auto;
-              border: 1px solid #eee;
-              padding: 0 15px;
-              border-radius: 4px;
-              background-color: #fcfcfc;
-              margin-top: 15px;
-          }
-          .paper-image {
-            width: 100%;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-            transition: transform 0.2s;
-            cursor: pointer;
-          }
-          .paper-image:hover {
-            transform: scale(1.02);
-          }
-          .news-date {
-              font-weight: bold;
-              color: #555;
-              font-size: 0.95rem;
-          }
-          .course-number {
-              font-weight: bold;
-              color: #444;
-          }
-          .paper-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #222;
-          }
-          .paper-authors {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 5px;
-          }
-          .paper-desc {
-             color: #666;
-             margin-bottom: 5px;
-          }
-          .company-name {
-            font-weight: bold;
-            font-size: 1.1rem;
-          }
-          .intern-host {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 5px;
-          }
-
-          /* Custom Modal Styles */
-          .custom-image-modal {
-            display: none; 
-            position: fixed; 
-            z-index: 9999; 
-            padding-top: 50px; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.9); 
-          }
-          .custom-modal-content {
-            margin: auto;
-            display: block;
-            width: auto;
-            max-width: 90%; 
-            max-height: 90vh;
-          }
-          #custom-caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-          }
-          .custom-modal-content, #custom-caption {  
-            animation-name: zoom;
-            animation-duration: 0.3s;
-          }
-          @keyframes zoom {
-            from {transform:scale(0.1)} 
-            to {transform:scale(1)}
-          }
-          .custom-close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            z-index: 10000;
-          }
-          .custom-close:hover,
-          .custom-close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-          }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yuexi Du is a Yale Ph.D. candidate researching multimodal learning, computer vision, and medical image analysis.">
+  <meta name="theme-color" content="#ffffff" data-theme-color>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem("theme");
+        var preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = savedTheme || preferredTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <meta property="og:title" content="Yuexi Du — Academic Homepage">
+  <meta property="og:description" content="Research in multimodal learning, computer vision, and medical image analysis.">
+  <meta property="og:type" content="website">
+  <title>Yuexi Du — Academic Homepage</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
 </head>
-
 <body>
-    <div id='header'>
-        <div class='container'>
-            <div class='row'>
-                <!---
-                <div class="col-sm-3 offset-sm-1">
-                    <img src='imgs/portrait.jpeg' class='img-fluid' id='portrait'>
-                </div>
-                -->
-                
-                <div class="col">
-                    <div id='header-text-name'>
-                        Yuexi Du
-                    </div>
-                    <div id='header-text-email'>
-                    <i class="fa fa-envelope" aria-hidden="true"></i> yuexi.du@yale.edu
-                  </div>
-                  <div>
-                    <a href="https://github.com/XYPB"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-                    <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&hl=en"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
-                    <a href="https://twitter.com/yuexi_du"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-                    <a href="https://www.linkedin.com/in/yuexi-du-42b972208/"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a>
-                    <a href="resume/resume_Yuexi_Du.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download CV</a> 
-                  </div>
-                </div>
-            </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="#top">Yuexi Du</a>
+      <div class="header-actions">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-menu>
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#teaching">Teaching</a>
+          <a href="resume/resume_Yuexi_Du.pdf">CV</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Use dark mode" data-theme-toggle><span data-theme-label>Dark</span></button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="intro" id="top" aria-labelledby="intro-title">
+      <h1 id="intro-title">Yuexi Du</h1>
+      <p class="intro-role">Ph.D. Candidate in Biomedical Engineering at Yale University</p>
+      <p class="intro-focus">Multimodal learning, computer vision, and medical image analysis.</p>
+      <div class="profile-links" aria-label="Contact and profile links">
+        <a href="mailto:yuexi.du@yale.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://github.com/XYPB">GitHub</a>
+        <a href="https://www.linkedin.com/in/yuexi-du-42b972208/">LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="page-section" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="prose">
+        <p>I am a fourth-year Ph.D. candidate in Biomedical Engineering at Yale University, advised by Prof. <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>. I also collaborate with Prof. <a href="https://scholar.google.com/citations?user=ccSuHj8AAAAJ&amp;hl=en">John Onofrey</a>.</p>
+        <p>I am currently a Ph.D. Software Engineering Intern with the GenMedia Group at Google Cloud, where I work on MLLM autorater development for video generation. Previously, I completed research internships at Microsoft Research Asia and Tencent AI Lab.</p>
+        <p>I received a bachelor's degree in Computer Science from the University of Michigan, where I worked with Prof. <a href="https://andrewowens.com/">Andrew Owens</a>, and a bachelor's degree in Electrical and Computer Engineering from Shanghai Jiao Tong University. My research focuses on questions with clear real-world and clinical relevance.</p>
+      </div>
+    </section>
+
+    <section class="page-section" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <div class="news-years">
+        <details class="news-year" open>
+          <summary><span class="news-year-title">2026</span><span class="news-year-count">4 updates</span></summary>
+          <div class="news-list">
+            <div class="news-item"><time datetime="2026-06">Summer</time><p>Joined Google Cloud's GenMedia Group as a Ph.D. Software Engineering Intern, working on MLLM autorater development.</p></div>
+            <div class="news-item"><time datetime="2026-06">June</time><p><a href="https://xypb.github.io/MammoFlow/">MammoFlow</a> was accepted to <strong>MICCAI 2026</strong>.</p></div>
+            <div class="news-item"><time datetime="2026-01">January</time><p><a href="https://xypb.github.io/CARE-Project-Page/">CARE</a> was accepted to <strong>ICLR 2026</strong>.</p></div>
+            <div class="news-item"><time datetime="2026-01">January</time><p>Two papers were accepted to <strong>IEEE ISBI 2026</strong>.</p></div>
+          </div>
+        </details>
+
+        <details class="news-year">
+          <summary><span class="news-year-title">2025</span><span class="news-year-count">5 updates</span></summary>
+          <div class="news-list">
+            <div class="news-item"><time datetime="2025-06">June</time><p>GLAM was accepted to <strong>MICCAI 2025</strong>.</p></div>
+            <div class="news-item"><time datetime="2025-06">June</time><p>Joined Microsoft Research Asia for a summer research internship with Dr. Jinglu Wang.</p></div>
+            <div class="news-item"><time datetime="2025-05">May</time><p>MaMA received <strong>Best Oral Paper Runner-up</strong> (ranked second) at IPMI 2025.</p></div>
+            <div class="news-item"><time datetime="2025-02">February</time><p>MaMA was accepted to <strong>IPMI 2025</strong> for an oral presentation.</p></div>
+            <div class="news-item"><time datetime="2025-01">January</time><p>Two papers on rotation-equivariant convolution kernels were accepted to <strong>IEEE ISBI 2025</strong>.</p></div>
+          </div>
+        </details>
+
+        <details class="news-year">
+          <summary><span class="news-year-title">2024</span><span class="news-year-count">5 updates</span></summary>
+          <div class="news-list">
+            <div class="news-item"><time datetime="2024-11">November</time><p>Passed the Yale area exam and advanced to Ph.D. candidacy.</p></div>
+            <div class="news-item"><time datetime="2024-10">October</time><p>Received $800 in Yale University Conference Travel Funding.</p></div>
+            <div class="news-item"><time datetime="2024-09">September</time><p>Won first place in the <a href="https://bionlplab.github.io/2024_MICCAI_CXRLT/">MICCAI 2024 CXR-LT Challenge</a> long-tail classification task; the team was also named the overall best-performing team and received a $900 prize.</p></div>
+            <div class="news-item"><time datetime="2024-06">June</time><p>CLEFT was accepted to <strong>MICCAI 2024</strong> for an in-person presentation in Marrakesh.</p></div>
+            <div class="news-item"><time datetime="2024-02">February</time><p>SIFT-DBT and another paper were accepted to <strong>IEEE ISBI 2024</strong>.</p></div>
+          </div>
+        </details>
+
+        <details class="news-year">
+          <summary><span class="news-year-title">2023</span><span class="news-year-count">4 updates</span></summary>
+          <div class="news-list">
+            <div class="news-item"><time datetime="2023-06">June</time><p>Joined Prof. Nicha C. Dvornek's group as a Ph.D. student to work on digital breast tomosynthesis and breast cancer.</p></div>
+            <div class="news-item"><time datetime="2023-02">February</time><p>Conditional Generation of Audio from Video via Foley Analogies was accepted to <strong>CVPR 2023</strong>.</p></div>
+            <div class="news-item"><time datetime="2023-01">January</time><p>RetCCL was published in <strong>Medical Image Analysis</strong> (impact factor 10.9 at the time of the update).</p></div>
+            <div class="news-item"><time datetime="2023-01">January</time><p>Began a rotation in Prof. John Onofrey's lab to study rotation-invariant feature extraction.</p></div>
+          </div>
+        </details>
+
+        <details class="news-year">
+          <summary><span class="news-year-title">2022</span><span class="news-year-count">1 update</span></summary>
+          <div class="news-list">
+            <div class="news-item"><time datetime="2022-09">September</time><p>Joined Yale University as a Ph.D. student in Biomedical Engineering.</p></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="page-section" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Selected Publications</h2>
+      <div class="publication-list">
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="mammoflow" aria-label="View the MammoFlow figure and abstract"><img src="assets/images/mammo_flow.png" alt="MammoFlow method overview"></button>
+          <div>
+            <h3>MammoFlow: Multiview Mammogram Synthesis with Anatomically Consistent Flow Matching</h3>
+            <p class="venue">MICCAI 2026</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Leya Barrientos, Laura Sheiman, John Lewin, Hemant D. Tagare, Nicha C. Dvornek</p>
+            <p class="item-links"><a href="https://xypb.github.io/MammoFlow/">Project</a><a href="https://arxiv.org/abs/2606.28537">Paper</a><a href="https://github.com/XYPB/MammoFlow">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/mammoflow.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="care" aria-label="View the CARE figure and abstract"><img src="assets/images/care.png" alt="CARE evidence-grounded agentic framework overview"></button>
+          <div>
+            <h3>CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework</h3>
+            <p class="venue">ICLR 2026</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Jinglu Wang, Shujie Liu, Nicha C. Dvornek, Yan Lu</p>
+            <p class="item-links"><a href="https://xypb.github.io/CARE-Project-Page/">Project</a><a href="https://arxiv.org/pdf/2603.01607">Paper</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/care.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="glam" aria-label="View the GLAM figure and abstract"><img src="assets/images/glam.png" alt="GLAM method overview"></button>
+          <div>
+            <h3>GLAM: Geometry-Guided Local Alignment for Multi-View Visual Language Pre-Training in Mammography</h3>
+            <p class="venue">MICCAI 2025</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Lihui Chen, Nicha C. Dvornek</p>
+            <p class="item-links"><a href="https://arxiv.org/abs/2509.10344">Paper</a><a href="https://github.com/XYPB/GLAM">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/glam.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="mama" aria-label="View the MaMA figure and abstract"><img src="assets/images/MaMA.png" alt="MaMA method overview"></button>
+          <div>
+            <h3>MaMA: Multi-View and Multi-Scale Alignment for Contrastive Language-Image Pre-training in Mammography</h3>
+            <p class="venue">IPMI 2025 · Oral, Best Oral Paper Runner-up</p>
+            <p class="authors"><strong>Yuexi Du</strong>, John Onofrey, Nicha C. Dvornek</p>
+            <p class="item-links"><a href="https://arxiv.org/abs/2409.18119">Paper</a><a href="https://github.com/XYPB/MaMA">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/mama.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="sreconv" aria-label="View the SRE-Conv figure and abstract"><img src="assets/images/sre_conv.gif" alt="SRE-Conv method overview"></button>
+          <div>
+            <h3>SRE-Conv: Symmetric Rotation Equivariant Convolution for Biomedical Image Classification</h3>
+            <p class="venue">IEEE ISBI 2025</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Jiazhen Zhang, Tal Zeevi, Nicha C. Dvornek, John Onofrey</p>
+            <p class="item-links"><a href="https://arxiv.org/abs/2501.09753">Paper</a><a href="https://github.com/XYPB/SRE-Conv">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/sre-conv.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="cleft" aria-label="View the CLEFT figure and abstract"><img src="assets/images/cleft.png" alt="CLEFT method overview"></button>
+          <div>
+            <h3>CLEFT: Language-Image Contrastive Learning with Efficient Large Language Model and Prompt Fine-Tuning</h3>
+            <p class="venue">MICCAI 2024</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Brian Chang, Nicha C. Dvornek</p>
+            <p class="item-links"><a href="https://arxiv.org/abs/2407.21011">Paper</a><a href="https://github.com/XYPB/CLEFT">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/cleft.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="siftdbt" aria-label="View the SIFT-DBT figure and abstract"><img src="assets/images/volume_all_roc.png" alt="SIFT-DBT classification results"></button>
+          <div>
+            <h3>SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification</h3>
+            <p class="venue">IEEE ISBI 2024</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Regina J. Hooley, John Lewin, Nicha C. Dvornek</p>
+            <p class="item-links"><a href="https://arxiv.org/pdf/2403.13148">Paper</a><a href="https://github.com/XYPB/SIFT_DBT">Code</a><a href="assets/pdfs/sift_dbt2024_poster.pdf">Poster</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/sift-dbt.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="foley" aria-label="View the Foley Analogies figure and abstract"><img src="assets/images/avanalogies.png" alt="Foley Analogies method overview"></button>
+          <div>
+            <h3>Conditional Generation of Audio from Video via Foley Analogies</h3>
+            <p class="venue">CVPR 2023</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Ziyang Chen, Justin Salamon, Bryan Russell, Andrew Owens</p>
+            <p class="item-links"><a href="https://xypb.github.io/CondFoleyGen/">Project</a><a href="https://arxiv.org/abs/2304.08490">Paper</a><a href="https://github.com/XYPB/CondFoleyGen">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/condfoleygen.txt">BibTeX</button></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <button class="paper-figure-button" type="button" data-paper-detail data-abstract-key="retccl" aria-label="View the RetCCL figure and abstract"><img src="assets/images/retccl.png" alt="RetCCL method overview"></button>
+          <div>
+            <h3>RetCCL: Clustering-guided Contrastive Learning for Whole-slide Image Retrieval</h3>
+            <p class="venue">Medical Image Analysis</p>
+            <p class="authors">Xiyue Wang, <strong>Yuexi Du</strong>, Sen Yang, Jun Zhang, Minghui Wang, Jing Zhang, Wei Yang, Junzhou Huang, Xiao Han</p>
+            <p class="item-links"><a href="https://www.sciencedirect.com/science/article/pii/S1361841522002730">Paper</a><a href="https://github.com/Xiyue-Wang/RetCCL">Code</a><button class="text-button bibtex-trigger" type="button" data-bibtex-url="cites/retccl.txt">BibTeX</button></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected Projects</h2>
+      <div class="publication-list">
+        <article class="publication">
+          <img src="assets/images/DDM2.png" alt="Diffusion MRI denoising project overview">
+          <div>
+            <h3>Controlled and Self-supervised Diffusion MRI Denoising via Generative Diffusion</h3>
+            <p class="venue">CPSC 586 Probabilistic Machine Learning Final Project</p>
+            <p class="authors"><strong>Yuexi Du</strong></p>
+            <p class="item-links"><a href="https://drive.google.com/file/d/1iYNVbocsrPnjHuh0RqnwLCIvb7VLpEwE/view?usp=sharing">Report</a><a href="https://github.com/XYPB/DDM2">Code</a></p>
+          </div>
+        </article>
+        <article class="publication">
+          <img src="assets/images/colorVAE.jpg" alt="COLOR-VAE image colorization project">
+          <div>
+            <h3>COLOR-VAE: Generative Colorization with Variational Auto-encoder</h3>
+            <p class="venue">EECS 442 Computer Vision Final Project · Ranked #1</p>
+            <p class="authors"><strong>Yuexi Du</strong>, Muchen Xu, Yuang Zhang, Zhanhui Zhou, Chenshu Zhu</p>
+            <p class="item-links"><a href="https://drive.google.com/file/d/1NyOGlJl9AJlpn2WZPQXuo36-uacNff3Y/view">Report</a><a href="https://github.com/XYPB/ColorVAE">Code</a><a href="https://drive.google.com/file/d/1HQzCaNgMwJ8CPR0Vxa9Zt1a_jjqoBpHX/view">Video</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <div class="experience-list">
+        <article class="experience-item">
+          <img src="assets/logos/google.svg" alt="Google">
+          <div><h3>Google Cloud, GenMedia Group</h3><p>Ph.D. Software Engineering Intern</p><p class="description">MLLM autorater development for video generation. Mentored by Dr. Yan Xu.</p></div>
+          <time datetime="2026">Summer 2026</time>
+        </article>
+        <article class="experience-item">
+          <img src="assets/logos/ms_logo.png" alt="Microsoft">
+          <div><h3>Microsoft Research Asia, Media Computing Group</h3><p>Research Intern</p><p class="description">Evidence-grounded medical VQA agents. Mentored by Dr. Jinglu Wang.</p></div>
+          <time datetime="2025">Summer 2025</time>
+        </article>
+        <article class="experience-item">
+          <img src="assets/logos/tencent_ailab.png" alt="Tencent AI Lab">
+          <div><h3>Tencent AI Lab, AI Healthcare Group</h3><p>Algorithm R&amp;D Intern</p><p class="description">Whole-slide image representation learning and retrieval. Mentored by Dr. Xiao Han and Sen Yang.</p></div>
+          <time datetime="2021">Summer 2021</time>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section" id="teaching" aria-labelledby="teaching-title">
+      <h2 id="teaching-title">Teaching</h2>
+      <div class="teaching-list">
+        <article><p class="course">ENAS 912</p><h3>Biomedical Image Processing and Analysis</h3><p>Teaching Fellow, Yale University</p></article>
+        <article><p class="course">EECS 442</p><h3>Computer Vision</h3><p>Instructor Aide, University of Michigan</p></article>
+        <article><p class="course">VR 246</p><h3>Introduction to Comics &amp; Visual Art</h3><p>Teaching Assistant, SJTU UMJI</p></article>
+        <article><p class="course">VE 101</p><h3>Introduction to Computer &amp; Programming</h3><p>Teaching Assistant, SJTU UMJI</p></article>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="service-title">
+      <h2 id="service-title">Academic Service</h2>
+      <p>Reviewer for conferences and journals including CVPR, ICCV, ECCV, NeurIPS, AAAI, MICCAI, ISBI, ICLR, AISTATS, IJCAI, ICML, IEEE Transactions on Multimedia, International Journal of Computer Vision, IEEE Transactions on Pattern Analysis and Machine Intelligence, and Medical Image Analysis.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="mailto:yuexi.du@yale.edu">yuexi.du@yale.edu</a><span aria-hidden="true"> · </span>© 2026 Yuexi Du</p>
+    </div>
+  </footer>
+
+  <dialog class="modal bibtex-dialog" id="bibtex-dialog" aria-labelledby="bibtex-dialog-title">
+    <div class="dialog-panel">
+      <header class="dialog-header">
+        <div>
+          <h2 id="bibtex-dialog-title">BibTeX</h2>
+          <p class="dialog-subtitle" data-bibtex-title></p>
         </div>
-    </div>
-
-    <div class='container'>
-        <div class='row vspace-top'>
-            <div class='col-12'>
-                <h1>Bio</h1>
-                <p>
-                    I am a fourth-year Ph.D. candidate at Yale University, majoring in BME, advised by Prof. <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>. I am also actively collaborating with Prof. <a href="https://scholar.google.com/citations?user=ccSuHj8AAAAJ&hl=en">John Onofrey</a>. I am currently a Ph.D. SWE Intern with the GenMedia Group at Google Cloud, working on MLLM autorater development. Before that, I got my Bachelor's degree in CS at the University of Michigan, Ann Arbor, advised by Prof. <a href="https://andrewowens.com/">Andrew Owens</a>, and another Bachelor's degree in ECE at Shanghai Jiao Tong University. I have also been honored to have research internships at Microsoft Research Asia and Tencent AI Lab, working on medical image analysis and multi-modal learning.
-                </p>
-                <p>
-                    My research interest lies in the computer vision, multi-modality learning, and medical image analysis. I am always thrilled to work on questions that address real-world needs.
-                </p>
-                <p>
-                    I am also honored to serve as a reviewer in conferences and journals, including CVPR, ICCV, ECCV, NeurIPS, AAAI, MICCAI, ISBI, ICLR, AISTATS, IJCAI, ICML, and IEEE-TMM, IJCV, IEEE-TPAMI, MedIA.
-                </p>
-
-                <!-- - List of news  -->
-                <div class='vspace-top'>
-                    <h1>News</h1>
-                </div>
-
-                <div class="news-container">
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Summer 2026
-                    </div>
-                    <div class="col">
-                        I joined the GenMedia Group at Google Cloud as a Ph.D. SWE Intern, working on MLLM autorater development!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        June 2026
-                    </div>
-                    <div class="col">
-                        One first-author paper "MammoFlow: Multiview Mammogram Synthesis with Anatomically Consistent Flow Matching" got accepted by <b>MICCAI 2026</b>🎉! Huge thanks to my collaborators! See you in France!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2026
-                    </div>
-                    <div class="col">
-                        One first-author paper "CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework" got accepted by <b>ICLR 2026</b>🎉! Huge thanks to my collaborators!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2026
-                    </div>
-                    <div class="col">
-                        Two papers get accepted by IEEE ISBI 2026! Congrats to my amazing collaborators!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        June 2025
-                    </div>
-                    <div class="col">
-                        One first-author paper "Geometry-Guided Local Alignment for Multi-View Visual Language Pre-Training in Mammography" got accepted by <b>MICCAI 2025</b>🎉! See you at Daejeon~
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        June 2025
-                    </div>
-                    <div class="col">
-                        I have joined MSRA for summer research internship, mentored by Dr. Jinglu Wang!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        May 2025
-                    </div>
-                    <div class="col">
-                        Our paper "MaMA" was awarded with <element  style="color:crimson">Best Oral Paper Runner-up</element> (ranked #2) at <b>IPMI 2025</b>🎉! Huge honor to recieve this!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Feb 2025
-                    </div>
-                    <div class="col">
-                        Our paper "MaMA: Multi-View and Multi-Scale Alignment for Contrastive Language-Image Pre-training in Mammography" was accepted by <b>IPMI 2025</b>🎉 for <element  style="color:crimson">Oral Presentation</element>! See you in Greece (again)!
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2025
-                    </div>
-                    <div class="col">
-                        Two papers about rotational equivarient convolution kernel accepted by <b>ISBI 2025</b>! See you in Houston!
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Nov 2024
-                    </div>
-                    <div class="col">
-                        I have just passed my area exam and officially become a Ph.D. candidate!🎉
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Oct 2024
-                    </div>
-                    <div class="col">
-                        I am honored to receive the $800 Yale University Conference Travel Funding! 
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Sept 2024
-                    </div>
-                    <div class="col">
-                        🎊We just won the <b>first place (#1)</b> in the <a href="https://bionlplab.github.io/2024_MICCAI_CXRLT/">MICCAI 2024 CXR-LT Challenge</a> for the task of <i>Long-tail Classification on gold standard test set</i>! We were also recognized as the <b>overall best-performing team</b> and win a prize of $900! Really appreciate my collaborators!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jun 2024
-                    </div>
-                    <div class="col">
-                        One first-author paper <i>"CLEFT: Language-Image Contrastive Learning with Efficient Large Language Model and Prompt Fine-Tuning"</i> is accepted by <b>MICCAI 2024</b>! I will be presenting this paper in person at Marrakesh!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Feb 2024
-                    </div>
-                    <div class="col">
-                        One first-author paper <i>"SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification"</i> and one another paper accepted by <b>ISBI 2024</b>! See you in Athens!
-                    </div>
-                </div>
-                
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jun 2023
-                    </div>
-                    <div class="col">
-                        I'll join <b>Nicha's</b> Group as a Ph.D. student next semester and work on DBT data and Breast cancer.
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Feb 2023
-                    </div>
-                    <div class="col">
-                        Our new work <i>"Conditional Generation of Audio from Video via Foley Analogies"</i> with Andrew has been accepted by <b>CVPR 2023</b>!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2023
-                    </div>
-                    <div class="col">
-                        Our work <i>"RetCCL: Clustering-guided contrastive learning for whole-slide image retrieval"</i> is now available on <b><i>Medical Image Analysis</i></b> (IF=<b>10.9</b>)!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Jan 2023
-                    </div>
-                    <div class="col">
-                        I will rotate at <b>Prof. John Onofrey's</b> lab this semester and working on rotational invariant feature extractor!
-                    </div>
-                </div>
-
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Sept 2022
-                    </div>
-                    <div class="col">
-                        I will join Yale University as a Ph.D. student majoring in BME!
-                    </div>
-                </div>
-                </div>
-                <div>&nbsp;</div>
-
-                <div class='vspace-top'>
-                    <h1>Work Experience</h1>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-2">
-                        <img width="80%" src="assets/logos/google.svg" alt="Google logo" style="margin-top: 6px;">
-                    </div>
-
-                    <div class="col-sm-10">
-                        <div class='company-name'>
-                            Google - GenMedia Group
-                        </div>
-                        <div class='intern-host'>
-                            Dr. Yan Xu
-                        </div>
-                        <div>
-                            Ph.D. SWE Intern. Working on MLLM autorater for video generation.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='row vspace-top'>
-                    <div class="col-sm-2">
-                        <img width="80%" src="assets/logos/ms_logo.png" style="border-radius: 4px;">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-10">
-                        <div class='company-name'>
-                            Microsoft Research Asia - Media Computing Group
-                        </div>
-                        <div class='intern-host'>
-                            Dr. Jinglu Wang
-                        </div>
-                        <div>
-                            Research Intern. Work on visual evidence grounded medical VQA agent based on RLVR.
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-2">
-                        <img width="80%" src="assets/logos/tencent_ailab.png" style="border-radius: 4px;">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-10">
-                        <div class='company-name'>
-                            Tencent AI Lab - AI Healthcare Group
-                        </div>
-                        <div class='intern-host'>
-                            Dr. Xiao Han, M.Sc Sen Yang
-                        </div>
-                        <div>
-                            Algorithm R&D Intern. Work on pathological image selfsupervised representation learning and fast Whole-Slide Image(WSI) search system.
-                        </div>
-                    </div>
-                </div>
-                
-                <div>&nbsp;</div>
-
-                <div class='vspace-top'>
-                    <h1>Selected Publications</h1>
-                </div>
-
-                <!--- List of publications --->
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/mammo_flow.png" alt="MammoFlow method overview">
-                        </img>
-                    </div>
-
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            MammoFlow: Multiview Mammogram Synthesis with Anatomically Consistent Flow Matching
-                        </div>
-                        <div class='paper-desc'>
-                            MICCAI 2026
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Leya Barrientos, Laura Sheiman, John Lewin, Hemant D. Tagare, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>
-                        </div>
-                        <div>
-                            <a href="https://xypb.github.io/MammoFlow/">[Project Page]</a>
-                            <a href="https://arxiv.org/abs/2606.28537">[arXiv]</a>
-                            <a href="https://github.com/XYPB/MammoFlow">[Github]</a>
-                            <a href="cites/mammoflow.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/care.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework
-                        </div>
-                        <div class='paper-desc'>
-                            ICLR 2026
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Jinglu Wang, Shujie Liu, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>, Yan Lu
-                        </div>
-                        <div>
-                            <a href="https://xypb.github.io/CARE-Project-Page/">[Project Page]</a>
-                            <a href="https://arxiv.org/pdf/2603.01607">[arXiv]</a>
-                            <a href="cites/care.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/glam.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            GLAM: Geometry-Guided Local Alignment for Multi-View Visual Language Pre-Training in Mammography
-                        </div>
-                        <div class='paper-desc'>
-                            MICCAI 2025
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Lihui Chen, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>
-                        </div>
-                        <div>
-                            <a href="https://arxiv.org/abs/2509.10344">[arXiv]</a>
-                            <a href="https://github.com/XYPB/GLAM">[Github]</a>
-                            <a href="cites/glam.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/MaMA.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            MaMA: Multi-View and Multi-Scale Alignment for Contrastive Language-Image Pre-training in Mammography
-                        </div>
-                        <div class='paper-desc'>
-                            IPMI 2025 <element  style="color:crimson">Oral, Best Oral Paper Runner-up</element> (basis of the best solution of the MICCAI 24 CXR-LT Challenge)
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, <a href="https://medicine.yale.edu/profile/john-onofrey/">John Onofrey</a>, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>
-                        </div>
-                        <div>
-                            <a href="https://arxiv.org/abs/2409.18119">[arXiv]</a>
-                            <a href="https://github.com/XYPB/MaMA">[Github]</a>
-                            <a href="cites/mama.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/sre_conv.gif">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            SRE-Conv: Symmetric Rotation Equivariant Convolution for Biomedical Image Classification
-                        </div>
-                        <div class='paper-desc'>
-                            IEEE ISBI 2025
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Jiazhen Zhang, <a href="https://medicine.yale.edu/profile/tal-zeevi/">Tal Zeevi</a>, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>, <a href="https://medicine.yale.edu/profile/john-onofrey/">John Onofrey</a>
-                        </div>
-                        <div>
-                            <a href="https://arxiv.org/abs/2501.09753">[Paper]</a>
-                            <a href="https://github.com/XYPB/SRE-Conv">[Github]</a>
-                            <a href="cites/sre-conv.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/cleft.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            CLEFT: Language-Image Contrastive Learning with Efficient Large Language Model and Prompt Fine-Tuning
-                        </div>
-                        <div class='paper-desc'>
-                            MICCAI 2024
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Brian Chang, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>
-                        </div>
-                        <div>
-                            <a href="https://arxiv.org/abs/2407.21011">[Paper]</a>
-                            <a href="https://github.com/XYPB/CLEFT">[Github]</a>
-                            <a href="cites/cleft.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/volume_all_roc.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            SIFT-DBT: Self-supervised Initialization and Fine-Tuning for Imbalanced Digital Breast Tomosynthesis Image Classification
-                        </div>
-                        <div class='paper-desc'>
-                            IEEE ISBI 2024
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Regina J Hooley, John Lewin, <a href="https://www.hellonicha.com/">Nicha C. Dvornek</a>
-                        </div>
-                        <div>
-                            <a href="https://arxiv.org/pdf/2403.13148">[Paper]</a>
-                            <a href="https://github.com/XYPB/SIFT_DBT">[Github]</a>
-                            <a href="assets/pdfs/sift_dbt2024_poster.pdf">[Poster]</a>
-                            <a href="cites/sift-dbt.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/avanalogies.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            Conditional Generation of Audio from Video via Foley Analogies
-                        </div>
-                        <div class='paper-desc'>
-                            CVPR 2023
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, <a href="https://ificl.github.io/">Ziyang Chen</a>, <a href="https://www.justinsalamon.com/">Justin Salamon</a>, <a href="https://bryanrussell.org/">Bryan Russell</a>, <a href="https://andrewowens.com/">Andrew Owens</a>
-                        </div>
-                        <div>
-                            <a href="https://xypb.github.io/CondFoleyGen/">[Project page]</a>
-                            <a href="https://arxiv.org/abs/2304.08490">[Paper]</a>
-                            <a href="https://github.com/XYPB/CondFoleyGen">[Github]</a>
-                            <a href="cites/condfoleygen.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/retccl.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            RetCCL: Clustering-guided contrastive learning for whole-slide image retrieval
-                        </div>
-                        <div class='paper-desc'>
-                            Medical Image Analysis (IF=<b>10.9</b>)
-                        </div>
-                        <div class='paper-authors'>
-                            Xiyue Wang, <b>Yuexi Du</b>, Sen Yang, Jun Zhang, Minghui Wang, Jing Zhang, Wei Yang, Junzhou Huang, Xiao Han
-                        </div>
-                        <div>
-                            <a href="https://www.sciencedirect.com/science/article/pii/S1361841522002730">[Paper]</a>
-                            <a href="https://github.com/Xiyue-Wang/RetCCL">[Github]</a>
-                            <a href="cites/retccl.txt">[Bibtex]</a>
-                        </div>
-                    </div>
-                </div>
-                <div>&nbsp;</div>
-
-                <div class='vspace-top'>
-                    <h1>Selected Projects</h1>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/DDM2.png">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            Controlled and Self-supervised Diffusion MRI Denoising via Generative Diffusion
-                        </div>
-                        <div class='paper-desc'>
-                            CPSC 586 Probabilistic Machine Learning Final Project
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>
-                        </div>
-                        <div>
-                            <a href="https://drive.google.com/file/d/1iYNVbocsrPnjHuh0RqnwLCIvb7VLpEwE/view?usp=sharing">[Report]</a>
-                            <a href="https://github.com/XYPB/DDM2">[Github]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img class="paper-image" src="assets/images/colorVAE.jpg">
-                        </img>
-                    </div>
-                
-                    <div class="col-sm-9">
-                        <div class='paper-title'>
-                            COLOR-VAE: Generative Colorization with Variational Auto-encoder
-                        </div>
-                        <div class='paper-desc'>
-                            EECS 442 Computer Vision Final Project (Rank <b>#1</b>)
-                        </div>
-                        <div class='paper-authors'>
-                            <b>Yuexi Du</b>, Muchen Xu, Yuang Zhang, Zhanhui Zhou, Chenshu Zhu
-                        </div>
-                        <div>
-                            <a href="https://drive.google.com/file/d/1NyOGlJl9AJlpn2WZPQXuo36-uacNff3Y/view">[Report]</a>
-                            <a href="https://github.com/XYPB/ColorVAE">[Github]</a>
-                            <a href="https://drive.google.com/file/d/1HQzCaNgMwJ8CPR0Vxa9Zt1a_jjqoBpHX/view">[Video]</a>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <div>&nbsp;</div>
-
-                <div class='vspace-top'>
-                    <h1>Teaching</h1>
-                </div>
-
-                <div class='row'>
-                    <div class="col-sm-2 course-number">
-                        ENAS 912
-                    </div>
-                    <div class="col">
-                        Biomedical Image Processing and Analysis. Teaching Fellow. Winter 2023 at Yale. With <a href="https://medicine.yale.edu/profile/james-duncan/">James Duncan</a> and <a href="https://medicine.yale.edu/profile/lawrence-staib/">Lawrence Staib</a>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class="col-sm-2 course-number">
-                        EECS 442 
-                    </div>
-                    <div class="col">
-                        Computer Vision. Instructor aide. Spring 2022 at UM. With <a href="https://web.eecs.umich.edu/~fouhey/">David Fouhey</a>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class="col-sm-2 course-number">
-                        VR 246
-                    </div>
-                    <div class="col">
-                        Introduction to Comics & Visual Art. Teaching Assistant. Spring 2021 at SJTU UMJI. With Jeolle Tybon
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class="col-sm-2 course-number">
-                        VE 101
-                    </div>
-                    <div class="col">
-                        Introduction to Computer & Programming. Teaching Assistant. Winter 2020 at SJTU UMJI. With <a href="https://umji.sjtu.edu.cn/~jgwu/">Jigang Wu</a>
-                    </div>
-                </div>
-            </div>
+        <div class="dialog-actions">
+          <button class="dialog-button" type="button" data-copy-bibtex>Copy</button>
+          <button class="dialog-button" type="button" aria-label="Close BibTeX dialog" data-dialog-close>Close</button>
         </div>
+      </header>
+      <pre class="bibtex-code"><code data-bibtex-content>Loading citation...</code></pre>
+      <p class="copy-status" role="status" aria-live="polite" data-copy-status></p>
     </div>
+  </dialog>
 
-
-    <div id='footer' class='vspace-top'>
-        <div class="container">
-            &copy; 2025 Yuexi Du.
-        </div>
+  <dialog class="modal paper-dialog" id="paper-dialog" aria-labelledby="paper-dialog-title">
+    <div class="dialog-panel">
+      <header class="dialog-header">
+        <h2 id="paper-dialog-title" data-paper-title>Paper details</h2>
+        <button class="dialog-button" type="button" aria-label="Close paper details" data-dialog-close>Close</button>
+      </header>
+      <div class="paper-dialog-content">
+        <img class="paper-dialog-image" alt="" data-paper-image>
+        <section class="abstract-block" aria-labelledby="abstract-heading">
+          <h3 id="abstract-heading">Abstract</h3>
+          <p data-paper-abstract></p>
+        </section>
+      </div>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- The Modal -->
-    <div id="myImageModal" class="custom-image-modal">
-      <span class="custom-close">&times;</span>
-      <img class="custom-modal-content" id="img01">
-      <div id="custom-caption"></div>
-    </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myImageModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("custom-caption");
-        
-        // Get all elements with class="paper-image"
-        var images = document.getElementsByClassName("paper-image");
-
-        // Loop through them and add click event
-        for (var i = 0; i < images.length; i++) {
-            images[i].onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                // Use alt if available, or nothing
-                captionText.innerHTML = this.alt || ""; 
-            }
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("custom-close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-        
-        // Also close if clicked outside image
-        modal.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+  </dialog>
 </body>
 </html>
