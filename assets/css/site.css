@@ -161,6 +161,56 @@ h3 {
   cursor: pointer;
 }
 
+.pixel-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  border: 1px solid var(--heading);
+  padding: 0.38rem 0.58rem;
+  background: var(--white);
+  box-shadow: 2px 2px 0 var(--rule);
+  color: var(--heading);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 100ms linear, box-shadow 100ms steps(2, end), color 100ms linear, transform 100ms steps(2, end);
+}
+
+.pixel-entry-icon {
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: repeat(2, 5px);
+  grid-template-rows: repeat(2, 5px);
+  gap: 1px;
+  width: 11px;
+  height: 11px;
+}
+
+.pixel-entry-icon span {
+  background: currentColor;
+}
+
+.pixel-entry-icon span:nth-child(2),
+.pixel-entry-icon span:nth-child(3) {
+  opacity: 0.42;
+}
+
+.pixel-entry-arrow {
+  color: var(--link);
+}
+
+.pixel-entry:hover {
+  border-color: var(--link);
+  box-shadow: 1px 1px 0 var(--rule);
+  color: var(--link);
+  text-decoration: none;
+  transform: translate(1px, 1px);
+}
+
 .theme-toggle:hover,
 .menu-button:hover {
   text-decoration: underline;
@@ -618,7 +668,13 @@ h3 {
   }
 
   .header-actions {
-    gap: 1rem;
+    gap: 0.72rem;
+  }
+
+  .pixel-entry {
+    gap: 0.38rem;
+    padding-inline: 0.46rem;
+    font-size: 0.68rem;
   }
 
   .menu-button {
@@ -719,6 +775,10 @@ h3 {
 @media (max-width: 520px) {
   body {
     font-size: 15.5px;
+  }
+
+  .pixel-entry-mode {
+    display: none;
   }
 
   .publication {

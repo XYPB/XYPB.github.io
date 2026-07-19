@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A pixel-style alternate homepage for Yuexi Du, a Yale Ph.D. candidate working on multimodal learning, computer vision, and medical image analysis.">
+  <meta name="theme-color" content="#071019">
+  <meta property="og:title" content="Yuexi Du — Pixel Mode">
+  <meta property="og:description" content="Research, experiments, and side quests in multimodal AI.">
+  <meta property="og:type" content="website">
+  <title>Yuexi Du — Pixel Mode</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pixel.css">
+  <script src="assets/js/pixel.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#pixel-main">Skip to content</a>
+  <div class="boot-screen" aria-hidden="true" data-boot-screen>
+    <p>YUEXI.EXE</p>
+    <div class="boot-track"><span></span></div>
+    <small>LOADING SIDE QUEST...</small>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <header class="pixel-header">
+    <div class="pixel-container header-shell">
+      <a class="pixel-brand" href="#home" aria-label="Yuexi Du pixel homepage">
+        <span class="brand-mark" aria-hidden="true">YD</span>
+        <span>YUEXI.EXE</span>
+      </a>
+      <nav class="pixel-nav" aria-label="Pixel page navigation">
+        <a href="#home">Home</a>
+        <a href="#quests">Quests</a>
+        <a href="#lab-log">Lab log</a>
+        <a href="#inventory">Inventory</a>
+      </nav>
+      <a class="pro-mode pixel-button pixel-button--small" href="index.html">Pro mode <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="pixel-main">
+    <section class="pixel-hero pixel-container" id="home" aria-labelledby="pixel-title">
+      <div class="hero-copy" data-reveal>
+        <h1 id="pixel-title">Hi, I’m Yuexi.</h1>
+        <p class="hero-line">I teach machines to<br><span>see, listen &amp; reason.</span><i class="cursor" aria-hidden="true"></i></p>
+        <p class="hero-note">Ph.D. candidate at Yale, building multimodal models for medical imaging and MLLM autoraters for video generation at Google Cloud.</p>
+        <div class="hero-actions">
+          <a class="pixel-button" href="#quests">Start here <span aria-hidden="true">↓</span></a>
+          <div class="social-links" aria-label="Contact and profile links">
+            <a href="mailto:yuexi.du@yale.edu">Email</a>
+            <span aria-hidden="true">/</span>
+            <a href="https://github.com/XYPB">GitHub</a>
+            <span aria-hidden="true">/</span>
+            <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&amp;hl=en">Scholar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal-wrap" data-reveal>
+        <span class="star star--one" aria-hidden="true"></span>
+        <span class="star star--two" aria-hidden="true"></span>
+        <span class="star star--three" aria-hidden="true"></span>
+        <figure class="pixel-terminal">
+          <figcaption><span class="terminal-dot" aria-hidden="true"></span>yuexi@terminal:~$</figcaption>
+          <div class="terminal-scene">
+            <img src="assets/images/pixel-yale.webp" alt="Pixel-art night view of Yale's neo-Gothic campus" width="1200" height="800">
+          </div>
+          <div class="terminal-lines" aria-label="Research interests">
+            <p><span aria-hidden="true">&gt;</span> multimodal reasoning + clinical evidence</p>
+            <p><span aria-hidden="true">&gt;</span> views + scales + anatomy → alignment</p>
+            <p><span aria-hidden="true">&gt;</span> ./build_better_models.sh<i class="mini-cursor" aria-hidden="true"></i></p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pixel-section quest-section" id="quests" aria-labelledby="quest-title">
+      <div class="pixel-container quest-layout">
+        <div class="section-intro" data-reveal>
+          <h2 id="quest-title">Current quest</h2>
+          <p>I build models that connect images, language, and evidence—from mammography synthesis and clinical reasoning to audiovisual generation.</p>
+          <ul class="quest-traits" aria-label="Research threads">
+            <li>Grounding multimodal reasoning in clinical evidence</li>
+            <li>Aligning language across views, scales, and anatomy</li>
+            <li>Learning representations that transfer across rotations, tasks, and datasets</li>
+          </ul>
+        </div>
+
+        <ol class="journey" aria-label="Experience journey">
+          <li data-reveal>
+            <span class="journey-node" aria-hidden="true">01</span>
+            <div>
+              <div class="journey-heading"><h3>Google Cloud</h3><time datetime="2026">Summer 2026</time></div>
+              <p>Ph.D. Software Engineering Intern in GenMedia, developing MLLM autoraters for video generation.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="journey-node" aria-hidden="true">02</span>
+            <div>
+              <div class="journey-heading"><h3>Yale</h3><time datetime="2022">2022 → now</time></div>
+              <p>Ph.D. candidate in Biomedical Engineering, advised by Prof. Nicha C. Dvornek.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="journey-node" aria-hidden="true">03</span>
+            <div>
+              <div class="journey-heading"><h3>Michigan + SJTU</h3><span>Before Yale</span></div>
+              <p>Bachelor’s degrees in Computer Science and Electrical &amp; Computer Engineering. Two campuses, one long adventure.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pixel-section pixel-container lab-section" id="lab-log" aria-labelledby="lab-title">
+      <div class="section-heading" data-reveal>
+        <h2 id="lab-title">Lab log</h2>
+        <span class="heading-line" aria-hidden="true"></span>
+      </div>
+      <div class="research-list">
+        <article class="research-row" data-reveal>
+          <span class="research-number" aria-hidden="true">01</span>
+          <a class="research-image" href="https://xypb.github.io/MammoFlow/" aria-label="Open MammoFlow project page"><img src="assets/images/mammo_flow.png" alt="MammoFlow method overview" loading="lazy"></a>
+          <div class="research-copy">
+            <p class="research-meta">MICCAI ’26</p>
+            <h3>MammoFlow</h3>
+            <p>Generating anatomically consistent paired mammograms from complementary views with flow matching.</p>
+          </div>
+          <div class="research-links" aria-label="MammoFlow links"><a href="https://arxiv.org/abs/2606.28537">Paper</a><a href="https://github.com/XYPB/MammoFlow">Code</a><a href="https://xypb.github.io/MammoFlow/">Project</a></div>
+        </article>
+
+        <article class="research-row" data-reveal>
+          <span class="research-number" aria-hidden="true">02</span>
+          <a class="research-image" href="https://xypb.github.io/CARE-Project-Page/" aria-label="Open CARE project page"><img src="assets/images/care.png" alt="CARE evidence-grounded agentic framework overview" loading="lazy"></a>
+          <div class="research-copy">
+            <p class="research-meta">ICLR ’26</p>
+            <h3>CARE</h3>
+            <p>Orchestrating proposal, segmentation, reasoning, and answer review around explicit clinical evidence.</p>
+          </div>
+          <div class="research-links" aria-label="CARE links"><a href="https://arxiv.org/pdf/2603.01607">Paper</a><a href="https://xypb.github.io/CARE-Project-Page/">Project</a></div>
+        </article>
+
+        <article class="research-row" data-reveal>
+          <span class="research-number" aria-hidden="true">03</span>
+          <a class="research-image" href="https://arxiv.org/abs/2509.10344" aria-label="Read the GLAM paper"><img src="assets/images/glam.png" alt="GLAM method overview" loading="lazy"></a>
+          <div class="research-copy">
+            <p class="research-meta">MICCAI ’25</p>
+            <h3>GLAM</h3>
+            <p>Using mammography geometry to align local visual details with language across views.</p>
+          </div>
+          <div class="research-links" aria-label="GLAM links"><a href="https://arxiv.org/abs/2509.10344">Paper</a><a href="https://github.com/XYPB/GLAM">Code</a></div>
+        </article>
+
+        <article class="research-row" data-reveal>
+          <span class="research-number" aria-hidden="true">04</span>
+          <a class="research-image" href="https://arxiv.org/abs/2409.18119" aria-label="Read the MaMA paper"><img src="assets/images/MaMA.png" alt="MaMA method overview" loading="lazy"></a>
+          <div class="research-copy">
+            <p class="research-meta">IPMI ’25 · Best Oral Runner-up</p>
+            <h3>MaMA</h3>
+            <p>Combining multi-view supervision and local alignment for mammography vision-language pre-training.</p>
+          </div>
+          <div class="research-links" aria-label="MaMA links"><a href="https://arxiv.org/abs/2409.18119">Paper</a><a href="https://github.com/XYPB/MaMA">Code</a></div>
+        </article>
+      </div>
+      <p class="more-research" data-reveal><span aria-hidden="true">&gt;</span> <a href="https://scholar.google.com/citations?user=qQWCY4UAAAAJ&amp;hl=en">See the full archive on Google Scholar</a></p>
+    </section>
+
+    <section class="pixel-section inventory-section" id="inventory" aria-labelledby="inventory-title">
+      <div class="pixel-container">
+        <h2 id="inventory-title" data-reveal>Inventory</h2>
+        <div class="inventory-grid">
+          <article data-reveal>
+            <p class="inventory-code" aria-hidden="true">// 01</p>
+            <h3>Builds</h3>
+            <ul>
+              <li>Mammography synthesis &amp; vision-language pre-training</li>
+              <li>Evidence-grounded medical reasoning agents</li>
+              <li><a href="https://github.com/XYPB">Open-source code for reproducible research</a></li>
+            </ul>
+          </article>
+          <article data-reveal>
+            <p class="inventory-code" aria-hidden="true">// 02</p>
+            <h3>Teaches</h3>
+            <ul>
+              <li>Biomedical image processing &amp; analysis at Yale</li>
+              <li>Computer vision at Michigan</li>
+              <li>Comics, visual art &amp; programming at SJTU</li>
+            </ul>
+          </article>
+          <article data-reveal>
+            <p class="inventory-code" aria-hidden="true">// 03</p>
+            <h3>Reviews</h3>
+            <ul>
+              <li>Medical imaging, vision &amp; language</li>
+              <li>CVPR, MICCAI, ICLR, ISBI &amp; more</li>
+              <li>Machine learning and medical imaging journals</li>
+            </ul>
+          </article>
+        </div>
+        <p class="side-quest" data-reveal><span aria-hidden="true">✦</span> Open to good science &amp; great side quests. <span aria-hidden="true">✦</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pixel-footer">
+    <div class="pixel-container footer-inner">
+      <p>© 2026 Yuexi Du</p>
+      <a href="mailto:yuexi.du@yale.edu">Insert coin to say hello →<span>yuexi.du@yale.edu</span></a>
+    </div>
+  </footer>
+</body>
+</html>
